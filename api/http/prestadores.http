@@ -1,0 +1,44 @@
+// Teste da resquisições REST dos prestadores
+
+@baseURL = http://localhost:4001/api/prestadores
+
+// GET - Lista todos os registro
+GET {{baseURL}}
+Content-Type: application/json
+
+###
+// GET - Lista um registro pelo id
+GET {{baseURL}}/id/
+
+###
+//GET - Listra um registro pela razão social
+GET {{baseURL}}
+Content-Type: application/json
+
+###
+//DELETE - Apaga um registro pelo id
+DELETE {{baseURL}}/id/
+Content-Type: aplication/json
+
+###
+// POST - Insere um novo registro
+
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+"cnpj": "45150718000149",
+    "razao_social": "SERVIÇOS MOTOBOY LTDA",
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "MOTOBOY",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+        "type": "Point",
+        "cordinates": [-23.2904, -47.2963]
+    }
+}   
+
+###
+// PUT - Altera registro
+PUT {{baseURL}}
+Content-Type: application/json
