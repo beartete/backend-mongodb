@@ -4,6 +4,7 @@ const app = express()
 const port = 4001
 //import das rotas da aplicação
 import rotasPrestadores from './routes/prestador.js'
+import rotasUsuarios from './routes/usuario.js'
 
 app.use(express.json()) // irá fazer o parse de arquivos JSON
 //Rotas de conteúdo público
