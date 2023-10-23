@@ -1,12 +1,44 @@
 // Teste do endpoint usuarios
-baseURL= http://localhost:4001/api/usuarios
+
+@baseURL = http://localhost:4001/api/usuarios
 
 ###
+
 POST {{baseURL}}
 Content-Type: application/json
 
+//tem que ser um espaço se não dá problema, não sei porque
 {
-    "nome": "José Alves Silva",
-    "email": "ze@oul.com.br",
+    "nome": "José Alves",
+    "email": "ze2@uol.com.br",
+    "senha": "Alun0@",
+    "avatar": "https://ui-avatars.com/api/?name=Guilherme+Kazuo&background=F00&color=00F"
+}
+
+###
+// POST - Efetuar o login
+POST {{baseURL}}/login
+Content-Type: application/json
+
+//tem que ser um espaço se não dá problema, não sei porque
+{
+    "email": "ze2@uol.com.br",
     "senha": "Alun0@"
 }
+
+
+###
+// GET - Obtem os usuarios
+GET {{baseURL}}
+Content-Type: application/
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkMmVhYWE1ZWM5N2RlMjdkYWY1In0sImlhdCI6MTY5ODA2OTA3MywiZXhwIjoxNjk4MzI4MjczfQ.n8xrWtqPIzcuoBWGj0mS6q1cR5zRRUIy44s5EOaD524
+
+//tem que ser um espaço se não dá problema, não sei porque
+
+
+###
+// DELETE - Remove o usuario pelo id
+
+DELETE {{baseURL}}/65366d2eaaa5ec97de27daf5
+Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkMmVhYWE1ZWM5N2RlMjdkYWY1In0sImlhdCI6MTY5ODA2OTA3MywiZXhwIjoxNjk4MzI4MjczfQ.n8xrWtqPIzcuoBWGj0mS6q1cR5zRRUIy44s5EOaD524

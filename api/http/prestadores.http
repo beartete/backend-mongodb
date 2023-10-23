@@ -1,44 +1,67 @@
-// Teste da resquisições REST dos prestadores
+// Teste das Requisições REST dos prestadores
 
 @baseURL = http://localhost:4001/api/prestadores
 
-// GET - Lista todos os registro
+###
+// GET - Lista todos os registros
+
 GET {{baseURL}}
-Content-Type: application/json
+Content-Type: application/json/
 
 ###
 // GET - Lista um registro pelo id
-GET {{baseURL}}/id/
 
-###
-//GET - Listra um registro pela razão social
-GET {{baseURL}}
+GET {{baseURL}}/id/65086b8ed5902b4232545475
 Content-Type: application/json
 
 ###
-//DELETE - Apaga um registro pelo id
-DELETE {{baseURL}}/id/
-Content-Type: aplication/json
+// GET - Lista um registro pela razao
+
+GET {{baseURL}}/razao/josue
+Content-Type: application/json
+
+
+###
+// DELETE - Apaga um registro pelo id
+
+DELETE {{baseURL}}/65086d09beeae064cfa69066
+Content-Type: application/json/
 
 ###
 // POST - Insere um novo registro
 
 POST {{baseURL}}
-Content-Type: application/json
-
+Content-Type: application/json/
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkMmVhYWE1ZWM5N2RlMjdkYWY1In0sImlhdCI6MTY5ODA2OTA3MywiZXhwIjoxNjk4MzI4MjczfQ.n8xrWtqPIzcuoBWGj0mS6q1cR5zRRUIy44s5EOaD524
 {
-"cnpj": "45150718000149",
-    "razao_social": "SERVIÇOS MOTOBOY LTDA",
+    "cnpj": "99150718777142",
+    "razao_social": "Rosita espinosa",
     "cnae_fiscal": 451510,
-    "nome_fantasia": "MOTOBOY",
+    "nome_fantasia": "JOSUÉ BOY",
     "data_inicio_atividade": "2020-08-01",
     "localizacao": {
         "type": "Point",
-        "cordinates": [-23.2904, -47.2963]
+        "coordinates": [-23.2904, -47.2963]
     }
-}   
+}
 
 ###
-// PUT - Altera registro
+//PUT - Altera o registro
 PUT {{baseURL}}
 Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkMmVhYWE1ZWM5N2RlMjdkYWY1In0sImlhdCI6MTY5ODA2OTA3MywiZXhwIjoxNjk4MzI4MjczfQ.n8xrWtqPIzcuoBWGj0mS6q1cR5zRRUIy44s5EOaD524
+{
+        "_id": "64ff26598560ed183e9aca8d",
+        "cnpj": "45150718000142",
+        "razao_social": "JOSUÉ ALVEZ ME",
+        "cnae_fiscal": 451510,
+        "nome_fantasia": "JOSUÉ BOY",
+        "data_inicio_atividade": "2020-08-01",
+        "localizacao": {
+            "type": "Point",
+            "coordinates": [
+                -23.2904,
+                -47.2963
+            ]
+        }
+    }
