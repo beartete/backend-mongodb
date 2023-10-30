@@ -1,6 +1,6 @@
 // Teste das Requisições REST dos prestadores
 
-@baseURL = http://localhost:4001/api/prestadores
+@baseURL = http://localhost:4000/api/prestadores
 
 ###
 // GET - Lista todos os registros

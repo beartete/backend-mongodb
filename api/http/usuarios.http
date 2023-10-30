@@ -1,6 +1,6 @@
 // Teste do endpoint usuarios
 
-@baseURL = http://localhost:4001/api/usuarios
+@baseURL = http://localhost:4000/api/usuarios
 
 ###
 

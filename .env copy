@@ -1,2 +1,4 @@
 MONGODB_URI = SuaStringdoMongo
 MONGODB_DB = SuaDatabase
+SECRET_KEY = SuaChaveSecreta
+EXPIRES_IN = 72h 
